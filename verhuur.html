@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verhuur</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <img src="afbeeldingen/fluitendefietserlogo.png" alt="Logo De Fluitende Fietser" class="header-logo">
+        <p>De Fluitende Fietser</p>
+    </header>
+
+    <nav>
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="fietsen.html" class="nav-link">Fietsen</a>
+        <a href="verhuur.html" class="nav-link active">Verhuur</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="overons.html" class="nav-link">Over ons</a>
+        <a href="buco.html" class="nav-link">BUCO</a>
+    </nav>
+
+    <main>
+        <div class="verhuur-sectie">
+            <div class="verhuur-kolom-foto">
+                <img src="afbeeldingen/slide3.jpg" alt="fietser afbeelding">
+                <img src="afbeeldingen/slide4.jpg" alt="fietser afbeelding">
+            </div>
+
+            <div class="verhuur-hoofd-box">
+                <div class="verhuur-container-grid">
+                    <div class="klant-info-kaart">
+                        <p class="instructie-tekst">Vul deze informatie eerst in voordat u een fiets selecteert!</p>
+
+                        <label for="input-naam">Naam</label>
+                        <input type="text" id="input-naam" placeholder="Uw naam" required>
+
+                        <label for="input-email">E-mail</label>
+                        <input type="email" id="input-email" placeholder="uw@email.nl" required>
+
+                        <label for="input-adres">Adres</label>
+                        <input type="text" id="input-adres" placeholder="Straat en nummer" required>
+
+                        <label for="input-stad">Stad</label>
+                        <input type="text" id="input-stad" pattern="[a-zA-Z\s\-]+" placeholder="Stad" required>
+
+                        <label for="input-postcode">Postcode</label>
+                        <input type="text" id="input-postcode" placeholder="1234 AB" pattern="[0-9]{4}\s?[a-zA-Z]{2}"
+                            title="Voer een geldige postcode in (bijv. 1234 AB)" required>
+                    </div>
+
+                    <div class="fiets-selectie-grid">
+                        <div class="huur-item">
+                            <input type="checkbox" id="aanhangfiets" data-prijs="20.00">
+                            <label for="aanhangfiets">
+                                <span class="fiets-naam">Aanhangfiets</span>
+                                <span class="fiets-prijs">€20.00 per dag</span>
+                            </label>
+                        </div>
+
+                        <div class="huur-item">
+                            <input type="checkbox" id="omafiets" data-prijs="12.50">
+                            <label for="omafiets">
+                                <span class="fiets-naam">Omafiets</span>
+                                <span class="fiets-prijs">€12.50 per dag</span>
+                            </label>
+                        </div>
+
+                        <div class="huur-item">
+                            <input type="checkbox" id="bakfiets" data-prijs="35.00">
+                            <label for="bakfiets">
+                                <span class="fiets-naam">Bakfiets</span>
+                                <span class="fiets-prijs">€35.00 per dag</span>
+                            </label>
+                        </div>
+
+                        <div class="huur-item">
+                            <input type="checkbox" id="racefiets" data-prijs="15.00">
+                            <label for="racefiets">
+                                <span class="fiets-naam">Racefiets</span>
+                                <span class="fiets-prijs">€15.00 per dag</span>
+                            </label>
+                        </div>
+
+                        <div class="huur-item">
+                            <input type="checkbox" id="driewielfiets" data-prijs="30.00">
+                            <label for="driewielfiets">
+                                <span class="fiets-naam">Driewielfiets</span>
+                                <span class="fiets-prijs">€30.00 per dag</span>
+                            </label>
+                        </div>
+
+                        <div class="huur-item">
+                            <input type="checkbox" id="speedpedelec" data-prijs="15.00">
+                            <label for="speedpedelec">
+                                <span class="fiets-naam">Speed pedelec</span>
+                                <span class="fiets-prijs">€15.00 per dag</span>
+                            </label>
+                        </div>
+
+                        <div class="huur-item">
+                            <input type="checkbox" id="elektrischefiets" data-prijs="30.00">
+                            <label for="elektrischefiets">
+                                <span class="fiets-naam">Elektrische fiets</span>
+                                <span class="fiets-prijs">€30.00 per dag</span>
+                            </label>
+                        </div>
+
+                        <div class="huur-item">
+                            <input type="checkbox" id="stadsfiets" data-prijs="12.50">
+                            <label for="stadsfiets">
+                                <span class="fiets-naam">Stadsfiets</span>
+                                <span class="fiets-prijs">€12.50 per dag</span>
+                            </label>
+                        </div>
+
+                        <div class="huur-item">
+                            <input type="checkbox" id="kinderfiets" data-prijs="15.00">
+                            <label for="kinderfiets">
+                                <span class="fiets-naam">Kinderfiets</span>
+                                <span class="fiets-prijs">€15.00 per dag</span>
+                            </label>
+                        </div>
+
+                        <div class="huur-item">
+                            <input type="checkbox" id="vouwfiets" data-prijs="10.00">
+                            <label for="vouwfiets">
+                                <span class="fiets-naam">Vouwfiets</span>
+                                <span class="fiets-prijs">€10.00 per dag</span>
+                            </label>
+                        </div>
+
+                        <div class="huur-item">
+                            <input type="checkbox" id="ligfiets" data-prijs="45.00">
+                            <label for="ligfiets">
+                                <span class="fiets-naam">Ligfiets</span>
+                                <span class="fiets-prijs">€45.00 per dag</span>
+                            </label>
+                        </div>
+
+                        <div class="huur-item">
+                            <input type="checkbox" id="zitfiets" data-prijs="15.00">
+                            <label for="zitfiets">
+                                <span class="fiets-naam">Zitfiets</span>
+                                <span class="fiets-prijs">€15.00 per dag</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="verhuur-kolom-foto">
+                <img src="afbeeldingen/slide5.png" alt="fietser afbeelding">
+                <img src="afbeeldingen/slide6.jpg" alt="fietser afbeelding">
+            </div>
+        </div>
+
+        <div class="button-wrapper-onder">
+            <button class="bestel-button-groot">Huur de fietsen</button>
+        </div>
+
+    </main>
+
+
+    <footer>
+        <div class="footercontainer">
+            <div class="blok">
+                <p class="footertitle">Navigatie</p>
+                <a href="overons.html" class="p-link">Over ons</a>
+                <a href="contact.html" class="p-link">Contact info</a>
+                <a href="documenten/algemenevoorwaarden.pdf" class="p-link" download>Algemene voorwaarden</a>
+            </div>
+
+            <div class="blok">
+                <p class="footertitle">Contact</p>
+                <a href="mailto:info@fluitendefietser.nl" class="p-link">info@fluitendefietser.nl</a>
+                <a href="https://www.facebook.com/fietsmagazine" class="p-link" target="_blank">
+                    <i class="fab fa-facebook"></i> Facebook
+                </a>
+            </div>
+
+            <div class="blok">
+                <p class="footertitle">Bedrijfsgegevens</p>
+                <p>KVK: 88599665</p>
+                <p>BTW: NL999888492Z09</p>
+            </div>
+        </div>
+
+        <p class="copyrightfooter">© 2026 De Fluitende Fietser</p>
+        <div class="bike-container">
+            <img src="afbeeldingen/bewegendefiets.png" id="moving-fietser" alt="Fietsende fietser">
+        </div>
+
+
+    </footer>
+    <div id="huurModal" class="modal-overlay hidden">
+        <div class="modal-container">
+            <button class="close-modal" id="close-modal">&times;</button>
+            <h2>Huur Overzicht</h2>
+            <div class="modal-header-info">
+                <div id="klant-resumé" class="mb-4"></div>
+            </div>
+
+            <table id="bestel-tabel">
+                <thead>
+                    <tr>
+                        <th>Fiets</th>
+                        <th>Aantal</th>
+                        <th>Dagen</th>
+                        <th>Prijs per dag (per fiets)</th>
+                        <th>Subtotaal</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="modal-bestellijst">
+                </tbody>
+            </table>
+            <div class="totaal-sectie">
+                <p>Totaalprijs: <span id="modal-totaalprijs">€0.00</span></p>
+            </div>
+            <div class="modal-buttons">
+                <button class="bestel-button-groot" onclick="afrekenen()">Afrekenen</button>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

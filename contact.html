@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <img src="afbeeldingen/fluitendefietserlogo.png" alt="Logo De Fluitende Fietser" class="header-logo">
+        <p>De Fluitende Fietser</p>
+    </header>
+
+    <nav>
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="fietsen.html" class="nav-link">Fietsen</a>
+        <a href="verhuur.html" class="nav-link">Verhuur</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+        <a href="overons.html" class="nav-link">Over ons</a>
+        <a href="buco.html" class="nav-link">BUCO</a>
+    </nav>
+
+    <main>
+        <div class="contact-grid">
+            <div class="infocontainer-links">
+                <h2>Stel uw vraag</h2>
+
+                <label for="input-voornaamcontact">Voornaam *</label>
+                <input type="text" id="input-voornaamcontact" pattern="[A-Za-zÀ-ÿ\s\-]+" title="Voornaam mag alleen letters bevatten" required>
+
+                <label for="input-achternaamcontact">Achternaam *</label>
+                <input type="text" id="input-achternaamcontact" pattern="[A-Za-zÀ-ÿ\s\-]+" title="Achternaam mag alleen letters bevatten" required>
+
+                <label for="input-emailcontact">E-mail *</label>
+                <input type="email" id="input-emailcontact" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Voer een geldig e-mailadres in (bijv. naam@domein.nl)" required>
+
+                <label for="textarea-contact">Uw vraag *</label>
+                <textarea id="textarea-contact" minlength="10" placeholder="Minimaal 10 tekens..." required></textarea>
+
+                <button class="verstuur-knop" onclick="valideerContactFormulier()" >Verstuur</button>
+            </div>
+
+            <div class="infocontainer-midden">
+                <h2>Contactgegevens</h2>
+
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p><strong>Adres</strong> <br> Markt 123 <br> 5611 AB Zonnedam </p>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <p><strong>Telefoon</strong> <br> 040 - 234 56 78</p>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <p><strong>E-mail</strong> <br> info@fluitendefietser.nl</p>
+                </div>
+
+                <div class="contact-item">
+                    <i class="fas fa-clock"></i>
+                <p><strong>Openingstijden</strong> <br>Maandag - Vrijdag: 9:00 - 18:00 <br> Zaterdag: 9:00 - 17:00 <br>
+                    Zondag: Gesloten</p>
+                    </div>
+
+
+            </div>
+
+            <div class="infocontainer-rechts">
+                <img src="afbeeldingen/kaart.png" alt="kaart">
+            </div>
+        </div>
+
+    </main>
+
+
+    <footer>
+        <div class="footercontainer">
+            <div class="blok">
+                <p class="footertitle">Navigatie</p>
+                <a href="overons.html" class="p-link">Over ons</a>
+                <a href="contact.html" class="p-link">Contact info</a>
+                <a href="documenten/algemenevoorwaarden.pdf" class="p-link" download>Algemene voorwaarden</a>
+            </div>
+
+            <div class="blok">
+                <p class="footertitle">Contact</p>
+                <a href="mailto:info@fluitendefietser.nl" class="p-link">info@fluitendefietser.nl</a>
+                <a href="https://www.facebook.com/fietsmagazine" class="p-link" target="_blank">
+                    <i class="fab fa-facebook"></i> Facebook
+                </a>
+            </div>
+
+            <div class="blok">
+                <p class="footertitle">Bedrijfsgegevens</p>
+                <p>KVK: 88599665</p>
+                <p>BTW: NL999888492Z09</p>
+            </div>
+        </div>
+
+        <p class="copyrightfooter">© 2026 De Fluitende Fietser</p>
+        <div class="bike-container">
+            <img src="afbeeldingen/bewegendefiets.png" id="moving-fietser" alt="Fietsende fietser">
+        </div>
+
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
